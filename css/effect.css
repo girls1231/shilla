@@ -1,0 +1,107 @@
+:root{
+  --mainColor1:#432C10;
+  --mainColor2:#595857;
+  --subColor1:#222;
+  --subColor2:#fff;
+
+  --font48: 3rem;
+  --font36: 2.25rem;
+  --font28: 1.75rem;
+  --font24: 1.5rem;
+  --font20: 1.25rem;
+  --font16: 1rem;
+  --font14: 0.875rem;
+}
+/* 딤드처리 */
+.con3_dimd{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 59%);
+}
+.con6_dimd{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 59%);
+}
+/* 버튼 이펙트 서식 */
+.btn{
+  border:none;
+  background-color: transparent;
+  width:180px;
+  height:50px;
+  border-radius:5px;
+  color:var(--subColor2);
+  font-size:var(--font14);
+  font-weight:300;
+  cursor: pointer;
+  position:relative;
+  outline: none;
+  display: inline-block;
+}
+/* 모바일 버튼 */
+.m_btn{
+  width:130px;
+  height:30px;
+  border:2px solid var(--mainColor2);
+  line-height:30px;
+  text-align:center;
+  color:var(--mainColor2);
+  border-radius:3px;
+  margin:50px auto 0;
+  display:none;
+}
+
+/* 효과 */
+.effect_btn {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.effect_btn::after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:var(--mainColor1);
+  transition: all 0.3s ease;
+}
+.sub2::after{
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mainColor2);
+  transition: all 0.3s ease;
+}
+.effect_btn:hover {
+  background: transparent;
+  /* box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+        inset -4px -4px 6px 0 rgba(255,255,255,.5),
+         inset 4px 4px 6px 0 rgba(116, 125, 136, .3); */
+  color: #fff;
+}
+
+.effect_btn:hover::after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  /* box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3); */
+}
+

@@ -1,0 +1,352 @@
+/* roboto font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* pretendard font */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+:root{
+    --mainColor1:#432C10;
+    --mainColor2:#595857;
+    --subColor1:#222;
+    --subColor2:#fff;
+
+    --font48: 3rem;
+    --font36: 2.25rem;
+    --font28: 1.75rem;
+    --font24: 1.5rem;
+    --font20: 1.25rem;
+    --font16: 1rem;
+    --font14: 0.875rem;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'Pretendard',"Roboto", arial, sans-serif;
+    color:var(--subColor1);
+    background-color:#fff;
+    line-height:160%;
+    overflow-x:hidden;
+}
+a{
+    color:var(--subColor1);
+    text-decoration:none;
+}
+h6{
+    visibility:hidden;
+}
+ul,li{
+    list-style:none;
+}
+img{
+    vertical-align:middle;
+}
+/* 탑버튼 서식*/
+#top_btn{
+    position:fixed;
+    right:40px;
+    bottom:50px;
+    display:none;
+    z-index:999999;
+}
+#top_btn img{
+    width:70px;
+}
+/* 모바일, 태블릿 전용 서식 미리 꺼두기(off) */
+.m_gnb_wrap{
+    display:none;
+}
+/* 푸터 1024px부터 나오는 메뉴 */
+.m_f_top_right{
+    display:none;
+}
+/* 푸터 767px 부터 나오는 목록 */
+#m_f_list{
+    display:none;
+}
+/* /////////////////////////////////////////////// */
+/* 상단헤더서식 //////////////////////////////////*/
+.h_act{
+    background-color: #fff;
+    position:fixed;
+    width:100%;
+    z-index:999999999;
+}
+header{
+    width:100%;
+    height:100px;
+    position:fixed;
+    top:0;
+    left:0;
+    border-bottom:1px solid #F3F3F3;
+    z-index:100;
+    transition:.2s;
+}
+.header_wrap{
+    position:relative;
+    width:100%;
+    max-width:1440px;
+    margin:0 auto;
+    height:100px;
+}
+.logo{
+    width:280px;
+    margin:20px auto;
+}
+.logo img{
+    width:100%;
+
+}
+/* 토글버튼 영역 서식 */
+.h_toggle{
+    position:absolute;
+    top:-20px;
+    left:0;
+    line-height:100px;
+    cursor:pointer;
+}
+.h_toggle img{
+    width:30px;
+    height:30px;
+}
+#lang{
+    position:absolute;
+    top:22%;
+    left:70px;
+    border:none;
+    background-color: transparent;
+    color:#fff;
+    font-size:var(--font16);
+}
+#lang > option{
+    color:var(--subColor1);
+}
+/* lnb 서식 */
+
+.lnb{
+    width:255px;
+    display:flex;
+    text-align:center;
+    justify-content:space-between;
+    position:absolute;
+    top:9%;
+    right:0;
+}
+.lnb p{
+    color:#fff;
+    font-family:'Pretendard';
+    font-size:var(--font14);
+}
+.lnb_reserve:hover, 
+.lnb_membership:hover, 
+.lnb_login:hover{
+    opacity:.9;
+}
+/* pc버전 gnb /////////////////////////////////////////////////////////////////*/
+.gnb_wrap{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:100px; left:0; 
+    background-color:#fff;
+    display:none;
+}
+.gnb_inner{
+    width:100%;
+    max-width:1440px;
+    height:100%;
+    margin:0 auto;
+    background-color:#fff;
+    position:relative;
+}
+/* gnb 예약상단바  */
+.gnb_reserve_bar{
+    width:100%;
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    padding-top:20px;
+}
+.gnb_reserve_bar dl{
+    width:15%;
+    position:relative;
+    padding-left:15px;
+    cursor:pointer;
+}
+.gnb_reserve_bar dl:first-child{
+    padding-left:0;
+}
+.gnb_reserve_bar dl::before{
+    content:'';
+    border-right:1px solid #D9D9D9;
+    position:absolute;
+    right:10%;
+    top:15%;
+    width:1px;
+    height:50px;
+}
+.gnb_reserve_bar dt{
+    color:#666;
+    font-size:var(--font14);
+    font-weight:500;
+    padding-top:10px;
+    font-family:"Roboto";
+}
+.gnb_reserve_bar dd{
+    font-size:var(--font20);
+    font-weight:600;
+    color:var(--subColor1);
+    padding-top:5px;
+}
+
+.gnb_reserve_bar dl:nth-child(3){
+    width:30%;
+}
+.gnb_reserve_bar dl:nth-child(4),
+.gnb_reserve_bar dl:nth-child(5),
+.gnb_reserve_bar dl:nth-child(6){
+    width:10%;
+    text-align:center;
+}
+.gnb_reserve_bar dl:nth-child(4)::before,
+.gnb_reserve_bar dl:nth-child(5)::before,
+.gnb_reserve_bar dl:nth-child(6)::before{
+   display:none; 
+}
+
+.gnb_reserve_btn{
+    width:180px;
+    height:50px;
+    border:none;
+    background-color: var(--mainColor1);
+    color:var(--subColor2);
+    font-size:var(--font20);
+    font-weight:400;
+    margin-top:15px;
+    /* border-radius:10px; */
+    cursor:pointer;
+    font-family:'Pretendard';
+}
+/* gnb메인 내용 */
+.gnb_l_box{
+    position:absolute;
+    top:25%;
+    width:650px;
+}
+.gnb_l_box img{
+    width:100%;
+}
+.gnb{
+    position:absolute;
+    top:22%;
+    right:0;
+}
+.gnb > ul{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.gnb > ul > li{
+    width:30%;
+    padding-top:30px;
+    text-align:center;
+
+}
+.gnb > ul > li > a{
+    color:var(--mainColor1);
+    font-size:var(--font24);
+    font-weight:600;
+    font-family:'Pretendard';
+}
+.gnb > ul > li > ul > li{
+    padding-top:15px;
+}
+.gnb > ul > li > ul > li > a{
+    color:var(--subColor1);
+    font-weight:500;
+}
+/* 하단 푸터서식/////////////////////////////////////////////// //*/
+footer{
+    width:100%;
+    height:250px;
+}
+.f_inner{
+    width:100%;
+    background-color: var(--mainColor2);
+}
+.f_top{
+    width:100%;
+    max-width:1440px;
+    height:60px;
+    margin:0 auto;
+    line-height:60px;
+    display:flex;
+    justify-content:space-between;
+}
+.f_top_left a{
+    font-family:"Roboto";
+    color:var(--subColor2);
+    font-size:var(--font20);
+    font-weight:300;
+    margin-left:50px;
+}
+.f_top_left{
+    width:50%;
+}
+.f_top_left a:first-child{
+    margin-left:0;
+}
+.f_top_right{
+    width:50%;
+    text-align:right;
+}
+.f_top_right a{
+    font-family:'Pretendard';
+    color:var(--subColor2);
+    margin-left:50px;
+}
+
+.f_bottom{
+    width:100%;
+    height:160px;
+    padding:15px 0;
+    background-color: var(--subColor2);
+    position:relative;
+}
+.f_bottom > nav{
+    max-width:1440px;
+    margin:0 auto;
+}
+.f_bottom > nav > ul{
+    width:50%;
+    display:flex;
+    justify-content:space-between;
+}
+.f_bottom > nav a{
+    font-weight:500;
+}
+.f_bottom > nav > ul > li:nth-child(2) a{
+    color:var(--mainColor1);
+    font-weight:bold;
+}
+address{
+    width:100%;
+    max-width:1440px;
+    margin:0 auto;
+    padding-top:70px;
+}
+address p{
+    width:53%;
+    font-style: normal;
+}
+.f_bottom .sns{
+    position:absolute;
+    bottom:10px;
+    right:0;
+    display:flex;
+    width:700px;
+    align-items:center;
+    float:right;
+}
+.sns > ul > li:first-child img{
+    transform:translateY(-8px);
+}

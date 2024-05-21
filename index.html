@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 파비콘 -->
+    <link rel="icon" href="./favicon/favicon.ico">
+    <!-- css초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <!-- 폰트어썸 cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" type="text/css">
+    <!-- 스와이퍼 cdn css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" type="text/css">
+    <!-- 헤더, 푸터 공통서식 css -->
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <!-- 공통 효과 서식 css -->
+    <link rel="stylesheet" href="./css/effect.css" type="text/css">
+    <!-- 메인 콘텐츠 서식 css -->
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <!-- 미디어쿼리 css -->
+    <link rel="stylesheet" href="./css/responsive.css" type="text/css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./script/jquery-3.7.1.min.js"></script>
+    <!-- 스와이퍼 cdn 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 스크롤 이벤트 스크립트 -->
+    <script src="./script/scroll_event.js" defer></script>
+    <!-- 메인콘텐츠 스크립트 -->
+    <script src="./script/main.js" defer></script>
+    <!-- 예약하기 모달 스크립트 -->
+    <script src="./script/modal.js" defer></script>
+    <!-- 헤더부분 스크립트 -->
+    <script src="./script/header.js" defer></script>
+    <title>신라호텔</title>
+</head>
+<body>
+    <div id="top_btn"><a href="#header" title="top_btn"><img src="./images/top_btn.png" alt="top_btn"></a></div>
+    <header id="header">
+        <!-- pc 버전 / 태블릿 768까지 header -->
+        <div class="header_wrap">
+            <!-- 메인로고 -->
+            <h1 class="logo"><a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo_thesilla1.png" id="logo_img" alt="메인로고_white"></a></h1>
+
+            <!-- (햄버거)토글버튼 -->
+            <div class="h_toggle">
+                <img src="./images/icon_toggle1.png" alt="h_toggle" id="h_toggle_img">
+            </div>
+            <select name="lang_kr" id="lang">
+                <option value="korean">KR</option>
+                <option value="english">EN</option>
+            </select>
+
+            <!-- lnb -->
+            <div class="lnb">
+                <div class="lnb_reserve">
+                    <a href="#" title="reserve"><img src="./images/icon_reserve1.png" alt="" id="reserve"><p>예약하기</p></a>
+                </div>
+                <div class="lnb_membership"><a href="#" title="신라리워즈"><img src="./images/icon_membership1.png" alt="신라리워즈">
+                <p>신라리워즈</p></a></div>
+                <div class="lnb_login"><a href="#" title="로그인"><img src="./images/icon_login1.png" alt="로그인"><p>로그인</p></a></div>
+            </div>
+            <!-- pc버전 toggle gnb 서식-->
+            <div class="gnb_wrap">
+                <div class="gnb_inner">
+                    <div class="gnb_reserve_bar">
+                        <dl>
+                            <dt>RESERVATION</dt>
+                            <dd>ROOM</dd>
+                        </dl>
+                        <dl>
+                            <dt>HOTEL</dt>
+                            <dd>제주신라호텔</dd>
+                        </dl>
+                        <dl>
+                            <dt>CHECK IN / OUT</dt>
+                            <dd>2024.05.01(일) - 2024.05.22(월)</dd>
+                        </dl>
+                        <dl>
+                            <dt>ROOM</dt>
+                            <dd>1</dd> 
+                        </dl>
+                        <dl>
+                            <dt>ADULT</dt>
+                            <dd>1</dd>
+                        </dl>
+                        <dl>
+                            <dt>CHILDREN</dt>
+                            <dd>1</dd>
+                        </dl>
+                        <input type="button" class="gnb_reserve_btn" value="예약하기">
+                    </div>
+                    <div class="gnb_l_box">
+                        <img src="./images/gnb_left_box.png" alt="gnb_left_box">
+                    </div>
+                    <nav class="gnb">
+                        <ul>
+                            <li>
+                                <a href="http://sree.dothome.co.kr/shilla/info.html" title="신라호텔소개">신라호텔소개</a>
+                                <ul>
+                                    <li><a href="http://sree.dothome.co.kr/shilla/info.html" title="호텔소개">호텔소개</a></li>
+                                    <li><a href="#" title="연혁">연혁</a></li>
+                                    <li><a href="#" title="수상이력">수상이력</a></li>
+                                    <li><a href="#" title="부대시설">부대시설</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" title="객실&#x0026;다이닝">객실&#x0026;다이닝</a>
+                                <ul>
+                                    <li><a href="#" title="객실예약">객실예약</a></li>
+                                    <li><a href="#" title="다이닝예약">다이닝예약</a></li>
+                                    <li><a href="#" title="프로모션예약">프로모션예약</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" title="스페셜오퍼">스페셜오퍼</a>
+                                <ul>
+                                    <li><a href="#" title="패키지">패키지</a></li>
+                                    <li><a href="#" title="이벤트">이벤트</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" title="스페셜오퍼">신라리워즈</a>
+                                <ul>
+                                    <li><a href="#" title="포인트안내">포인트안내</a></li>
+                                    <li><a href="#" title="회원특별혜택안내">회원특별혜택안내</a></li>
+                                    <li><a href="#" title="신라리워즈 문의">신라리워즈 문의</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="http://sree.dothome.co.kr/bbs/bbs/board.php?bo_table=shilla_QnA" title="고객문의">고객문의</a>
+                                <ul>
+                                    <li><a href="http://sree.dothome.co.kr/bbs/bbs/board.php?bo_table=shilla_QnA" title="공지사항">공지사항</a></li>
+                                    <li><a href="http://sree.dothome.co.kr/bbs/bbs/board.php?bo_table=shilla_QnA" title="FAQ">FAQ</a></li>
+                                    <li><a href="http://sree.dothome.co.kr/bbs/bbs/board.php?bo_table=shilla_QnA" title="Q&#x0026;A">Q&#x0026;A</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#" title="마이페이지">마이페이지</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- 1025px 아래로 tablet, mobile 버전 gnb 서식 -->
+            <div class="m_gnb_wrap">
+                <div class="m_gnb_inner">
+                    <!-- 모바일 lnb -->
+                    <h1 class="m_gnb_logo"><a href="index.html" title="메인페이지로 바로가기"><img src="./images/logo_thesilla2.png" alt="메인로고_white" ></a></h1>
+                    <div class="m_lnb">
+                        <a href="#none" title="login">로그인</a>
+                        <a href="#none" title="고객센터" class="customer_center">고객센터</a>
+                        <select name="m_lang_kr" id="m_lang">
+                            <option value="Language">Language</option>
+                            <option value="english">EN</option>
+                            <option value="korean">KR</option>
+                        </select>
+                    </div>
+                    <div id="close_btn"><img src="./images/close_btn.png" alt="close_btn"></div>
+                    <nav class="m_gnb">
+                        <ul>
+                            <li>
+                                <a href="#" title="신라호텔소개">신라호텔소개<i class="fas fa-angle-down"></i></a>
+                                <ul class="sub_m">
+                                    <li><a href="http://sree.dothome.co.kr/shilla/info.html" title="호텔소개">호텔소개</a></li>
+                                    <li><a href="#" title="연혁">연혁</a></li>
+                                    <li><a href="#" title="수상이력">수상이력</a></li>
+                                    <li><a href="#" title="부대시설">부대시설</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" title="객실&#x0026;다이닝">객실&#x0026;다이닝<i class="fas fa-angle-down"></i></a>
+                                <ul class="sub_m">
+                                    <li><a href="#" title="객실예약">객실예약</a></li>
+                                    <li><a href="#" title="다이닝예약">다이닝예약</a></li>
+                                    <li><a href="#" title="프로모션예약">프로모션예약</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" title="스페셜오퍼">스페셜오퍼<i class="fas fa-angle-down"></i></a>
+                                <ul class="sub_m">
+                                    <li><a href="#" title="패키지">패키지</a></li>
+                                    <li><a href="#" title="이벤트">이벤트</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" title="스페셜오퍼">신라리워즈<i class="fas fa-angle-down"></i></a>
+                                <ul class="sub_m">
+                                    <li><a href="#" title="포인트안내">포인트안내</a></li>
+                                    <li><a href="#" title="회원특별혜택안내">회원특별혜택안내</a></li>
+                                    <li><a href="#" title="신라리워즈 문의">신라리워즈 문의</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" title="고객문의">고객문의<i class="fas fa-angle-down"></i></a>
+                                <ul class="sub_m">
+                                    <li><a href="#" title="공지사항">공지사항</a></li>
+                                    <li><a href="http://sree.dothome.co.kr/bbs/bbs/board.php?bo_table=shilla_QnA" title="FAQ">FAQ</a></li>
+                                    <li><a href="#" title="Q&#x0026;A">Q&#x0026;A</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#" title="마이페이지">마이페이지</a></li>
+                        </ul>
+                    </nav>
+                    <div class="m_gnb_btn">
+                        <input type="button" value="예약하기" class="m_gnb_reserve_btn">
+                        <input type="button" value="예약확인" class="m_gnb_check_btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 첫번째 콘텐츠 -->
+        <section class="section con1">
+            <article class="con1_main_img">
+                <h6>&nbsp;</h6>
+            </article>
+            <div class="con1_txt">
+                <h2>THESHILLA</h2>
+                <p> ‘일상이 최고의 순간이 되는 곳’ 최고의 서비스로 고객에게 휴식을 제공합니다.</p>
+            </div>
+            <div class="con1_reserve_box">
+                <div class="con1_reserve_inner">
+                    <dl>
+                        <dt>RESERVATION</dt>
+                        <dd>ROOM</dd>
+                    </dl>
+                    <dl>
+                        <dt>HOTEL</dt>
+                        <dd>제주신라호텔</dd>
+                    </dl>
+                    <dl>
+                        <dt>CHECK IN / OUT</dt>
+                        <dd>2024.05.01(일) - 2024.05.22(월)</dd>
+                    </dl>
+                    <dl>
+                        <dt>ROOM</dt>
+                        <dd>1</dd> 
+                    </dl>
+                    <dl>
+                        <dt>ADULT</dt>
+                        <dd>1</dd>
+                    </dl>
+                    <dl>
+                        <dt>CHILDREN</dt>
+                        <dd>1</dd>
+                    </dl>
+                    <input type="button" id="con1_reserve_btn" value="RESERVE">
+                </div>
+            </div>
+            <!-- 예약하기 모달창 -->
+            <div class="con1_reserve_modal">
+                <div class="m_inner">
+                    <i class="fas fa-times" id="con1_reserve_close_btn"></i>
+                    <div class="m_inner_box">
+                    <div class="con1_reserve_room">
+                        <h5>room</h5>
+                        <ul>
+                        <li class="on" id="STANDARD">standard</li>
+                        <li id="DELUX">delux</li>
+                        <li id="EXCUTIVE">excutive</li>
+                        <li id="SUITE">suite</li>
+                        </ul>       
+                    </div>
+                    <div class="con1_reserve_hotel">
+                        <h5>hotel</h5>
+                        <ul>
+                        <li class="on" id="THESHILLA">the shilla</li>
+                        <li id="MONOGRAM">shilla monogram</li>
+                        <li id="STAY">shilla stay</li>
+                        <li id="GLOBAL">global</li>
+                        </ul>        
+                    </div>
+                    <div class="con1_wid767_reserve_box">
+                        <h5>HOTEL&#x0026;ROOM</h5>
+                        <ul class="con1_wid767_room">
+                        <li>
+                            <label for="con1_wid767_room_hotel">HOTEL</label>
+                            <select name="con1_wid767_room_hotel" id="con1_wid767_room_hotel">
+                            <option value="THE SHILLA">THE SHILLA</option>
+                            <option value="THE SHILLA">THE SHILLA</option>
+                            <option value="SHILLA MONOGRAM">SHILLA MONOGRAM</option>
+                            <option value="SHILLA STAY">SHILLA STAY</option>
+                            <option value="GLOBAL">GLOBAL</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="con1_wid767_room_room">ROOM</label>
+                            <select name="con1_wid767_room_room" id="con1_wid767_room_room">
+                            <option value="STANDARD">STANDARD</option>
+                            <option value="STANDARD">STANDARD</option>
+                            <option value="DELUX">DELUX</option>
+                            <option value="EXCUTIVE">EXCUTIVE</option>
+                            <option value="SUIT">SUIT</option>
+                            </select>
+                        </li>
+                        </ul>            
+                    </div>
+                    <div class="checkinout">
+                        <h5>check in&#x0026;out</h5>
+                            <div class="sec_cal">
+                            <div class="cal_nav">
+                                <a href="javascript:;" class="nav-btn go-prev">prev</a>
+                                <div class="year-month"></div>
+                                <a href="javascript:;" class="nav-btn go-next">next</a>
+                            </div>
+                            <div class="cal_wrap">
+                                <div class="days">
+                                <div class="day">MON</div>
+                                <div class="day">TUE</div>
+                                <div class="day">WED</div>
+                                <div class="day">THU</div>
+                                <div class="day">FRI</div>
+                                <div class="day">SAT</div>
+                                <div class="day">SUN</div>
+                                </div>
+                                <div class="dates"></div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="customer">
+                        <h5>customer</h5>
+                        <ul class="customer_num">
+                            <li>
+                            <label for="adult_num">ROOM</label>
+                            <select name="adult_num" id="adult_num">
+                                <option value="">객실</option>
+                                <option value="">1개</option>
+                                <option value="">2개</option>
+                                <option value="">3개</option>
+                                <option value="">4개</option>
+                            </select>
+                            </li>
+                            <li>
+                            <label for="children_num">ADULT</label>
+                            <select name="children_num" id="children_num">
+                                <option value="">인원</option>
+                                <option value="">1명</option>
+                                <option value="">2명</option>
+                                <option value="">3명</option>
+                                <option value="">4명</option>
+                            </select>
+                            </li>
+                            <li>
+                            <label for="baby_num">CHILDREN</label>
+                            <select name="baby_num" id="baby_num">
+                                <option value="">인원</option>
+                                <option value="">1명</option>
+                                <option value="">2명</option>
+                                <option value="">3명</option>
+                                <option value="">4명</option>
+                            </select>
+                            </li>
+                        </ul>        
+                    </div>
+                    </div>
+                    <div class="con1_reserve_box modal_reserve">
+                    <div class="con1_reserve_inner">
+                        <dl>
+                            <dt>RESERVATION</dt>
+                            <dd id="room">STANDARD</dd>
+                        </dl>
+                        <dl>
+                            <dt>HOTEL</dt>
+                            <dd id="hotel">THE SHILLA</dd>
+                        </dl>
+                        <dl>
+                            <dt>CHECK IN / OUT</dt>
+                            <dd>2024.05.01(일) - 2024.05.22(월)</dd>
+                        </dl>
+                        <dl>
+                            <dt>ROOM</dt>
+                            <dd>1</dd> 
+                        </dl>
+                        <dl>
+                            <dt>ADULT</dt>
+                            <dd>1</dd>
+                        </dl>
+                        <dl>
+                            <dt>CHILDREN</dt>
+                            <dd>1</dd>
+                        </dl>
+                        <input type="button" class="con1_reserve_btn2" value="RESERVE">
+                    </div>          
+                    </div>
+                    <input type="button" class="m_con1_reserve_btn2" value="RESERVE">
+                </div>
+            </div>
+            <!-- 모달 예약하기 끝 //////////////////////////////////////////// -->
+        </section>
+
+        <!-- 두번째 콘텐츠 -->
+        <section class="section con2 swiper mySwiper">
+            <h2 class="con_title">Special Offer</h2>
+            <article class="con2_wrap swiper-wrapper">
+                <div class="con2_inner swiper-slide">
+                    <div class="con2_l_box">
+                      <a href="#" title="스페셜오퍼"><img src="./images/con2_1.png" alt="specialoffer">
+                        <div class="con2_box_txt">
+                            <h3>Rewards Everlasting Moment</h3>
+                            <p>서울신라호텔</p>
+                            <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="con2_m_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_2.png" alt="specialoffer">
+                        <div class="con2_box_txt">
+                            <h3>Rewards Urban Cabana</h3>
+                            <p>서울신라호텔</p>
+                            <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                        </div>
+                      </a>
+                    </div>
+    
+                    <div class="con2_r_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_3.png" alt="specialoffer">
+                            <div class="con2_box_txt">
+                                <h3>Rewards Bed & BreakFast</h3>
+                                <p>신라모노그램 다낭</p>
+                                <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con2_txt_box">
+                        <h4>스페셜 오퍼</h4>
+                        <p>신라호텔에서만 만날 수 있는 특별한 호텔 패키지 및 프로모션 상품들을 확인하세요.</p>
+                        <button class="effect_btn btn con2-btn">자세히보기</button>
+                    </div>
+                </div> <!--con2_inner 끝-->
+
+                <div class="con2_inner swiper-slide">
+                    <div class="con2_l_box">
+                      <a href="#" title="스페셜오퍼"><img src="./images/con2_4.jpg" alt="specialoffer">
+                        <div class="con2_box_txt">
+                            <h3>Rewards Everlasting Moment</h3>
+                            <p>서울신라호텔</p>
+                            <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="con2_m_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_5.jpg" alt="specialoffer">
+                        <div class="con2_box_txt">
+                            <h3>Rewards Urban Cabana</h3>
+                            <p>서울신라호텔</p>
+                            <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                        </div>
+                      </a>
+                    </div>
+    
+                    <div class="con2_r_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_6.jpg" alt="specialoffer">
+                            <div class="con2_box_txt">
+                                <h3>Rewards Bed & BreakFast</h3>
+                                <p>신라모노그램 다낭</p>
+                                <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="con2_txt_box">
+                        <h4>스페셜 오퍼</h4>
+                        <p>신라호텔에서만 만날 수 있는 특별한 호텔 패키지 및 프로모션 상품들을 확인하세요.</p>
+                        <button class="effect_btn btn con2-btn">자세히보기</button>
+                    </div>
+                </div> <!--con2_inner 끝-->
+
+                <div class="con2_inner swiper-slide">
+                    <div class="con2_l_box">
+                      <a href="#" title="스페셜오퍼"><img src="./images/con2_7.jpg" alt="specialoffer">
+                        <div class="con2_box_txt">
+                            <h3>Rewards Everlasting Moment</h3>
+                            <p>서울신라호텔</p>
+                            <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="con2_m_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_8.jpg" alt="specialoffer">
+                        <div class="con2_box_txt">
+                            <h3>Rewards Urban Cabana</h3>
+                            <p>서울신라호텔</p>
+                            <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                        </div>
+                      </a>
+                    </div>
+    
+                    <div class="con2_r_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_9.jpg" alt="specialoffer">
+                            <div class="con2_box_txt">
+                                <h3>Rewards Bed & BreakFast</h3>
+                                <p>신라모노그램 다낭</p>
+                                <p class="con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con2_txt_box">
+                        <h4>스페셜 오퍼</h4>
+                        <p>신라호텔에서만 만날 수 있는 특별한 호텔 패키지 및 프로모션 상품들을 확인하세요.</p>
+                        <button class="effect_btn btn con2-btn">자세히보기</button>
+                    </div>
+                </div> <!--con2_inner 끝-->
+            </article>
+            <div class="con2_c_btn swiper-pagination">
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+            </div>
+
+
+            <!-- 1025px 아래부터 태블릿 모바일 서식 -->
+            <article class="m_con2_wrap">
+                <div class="m_con2_inner">
+                    <div class="m_con2_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_1.png" alt="specialoffer">
+                            <div class="m_con2_box_txt">
+                                <h3>Rewards Everlasting Moment</h3>
+                                <p>서울신라호텔</p>
+                                <p class="m_con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="m_con2_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_2.png" alt="specialoffer">
+                            <div class="m_con2_box_txt">
+                                <h3>Rewards Urban Cabana</h3>
+                                <p>서울신라호텔</p>
+                                <p class="m_con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="m_con2_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_3.png" alt="specialoffer">
+                            <div class="m_con2_box_txt">
+                                <h3>Rewards Bed & BreakFast</h3>
+                                <p>신라모노그램 다낭</p>
+                                <p class="m_con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="m_con2_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_4.jpg" alt="specialoffer">
+                            <div class="m_con2_box_txt">
+                                <h3>Rewards Everlasting Moment</h3>
+                                <p>서울신라호텔</p>
+                                <p class="m_con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="m_con2_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_7.jpg" alt="specialoffer">
+                            <div class="m_con2_box_txt">
+                                <h3>Rewards Urban Cabana</h3>
+                                <p>서울신라호텔</p>
+                                <p class="m_con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="m_con2_box">
+                        <a href="#" title="스페셜오퍼"><img src="./images/con2_6.jpg" alt="specialoffer">
+                            <div class="m_con2_box_txt">
+                                <h3>Rewards Bed & BreakFast</h3>
+                                <p>신라모노그램 다낭</p>
+                                <p class="m_con2_date">2024.04.01 ~ 2024.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <a href="#" title="con2전체내용으로 넘어가기" class="m_btn">&#x002B;view more</a>
+        </section>
+
+        <!-- 세번째 콘텐츠 서식 -->
+        <section class="section con3">
+            <h6>&nbsp;</h6>
+            <article id="con3_wrap">
+                <ul>
+                    <li>
+                      <a href="#" title="Standard" class="act">Standard</a>
+                      <div class="con3_img_box">
+                        <img src="./images/con3_room1.png" alt="con3_room1">
+                        <div class="con3_txt_box">
+                            <h3>STANDARD</h3>
+                            <p>스탠다드룸은 안락한 룸 분위기와 쾌적함으로 편안한 휴식 환경을 제공합니다.</p>
+                            <button class="effect_btn btn con3-btn">자세히보기</button>
+                        </div>
+                      </div>
+                    </li>
+              
+                    <li>
+                      <a href="#" title="Deluxe">Deluxe</a>
+                      <div class="con3_img_box">
+                        <div class="con3_dimd"></div>
+                        <img src="./images/con3_room2.png" alt="con3_room1">
+                        <div class="con3_txt_box">
+                            <h3>DELUXE</h3>
+                            <p>디럭스의 고급스런 품격이 느껴지는 모던 클래식한 감성을 선사합니다.</p>
+                            <button class="effect_btn btn con3-btn">자세히보기</button>
+                        </div>
+                      </div>
+                    </li>
+              
+                    <li>
+                      <a href="#" title="Executive">Executive</a>
+                      <div class="con3_img_box">
+                        <div class="con3_dimd"></div>
+                        <img src="./images/con3_room3.jpg" alt="con3_room1">
+                        <div class="con3_txt_box">
+                            <h3>EXECUTIVE</h3>
+                            <p>모더한 콘셉트의 아늑한 공간 안에 편안한 휴식을 선사하는 침구와 업무를 위한 책상을 갖추어 효율적인 구성이 돋보이는객실입니다.</p>
+                            <button class="effect_btn btn con3-btn">자세히보기</button>
+                        </div>
+                      </div>
+                    </li>
+              
+                    <li>
+                      <a href="#" title="Suite">Suite</a>
+                      <div class="con3_img_box">
+                        <div class="con3_dimd"></div>
+                        <img src="./images/con3_room4.jpg" alt="con3_room1">
+                        <div class="con3_txt_box">
+                            <h3>SUITE</h3>
+                            <p>모더한 콘셉트의 아늑한 공간 안에 편안한 휴식을 선사하는 침구와 업무를 위한 책상을 갖추어 효율적인 구성이 돋보이는객실입니다.</p>
+                            <button class="effect_btn btn con3-btn">자세히보기</button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+            </article>
+        </section>
+
+        <!-- 네번째 콘텐츠 서식 -->
+        <section class="section con4">
+            <h2 class="con_title">Facilities</h2>
+            <article class="con4_wrap swiper mySwiper2">
+                <div class="con4_inner swiper-wrapper">
+                    <div class="con4_img_box swiper-slide">
+                        <a href="#" title="Facilities"><img src="./images/con4_1.png" alt="con4_1"></a>
+                        <div class="con4_txt_box ">
+                            <h3>라운지 바 <span>Rounge & Bar</span></h3>
+                            <p>23층 최고층에 위치하여 멋지게 펼쳐진 전망이 한 눈에 들어오며 편안하고 아늑한 분위기를 자랑합니다.</p>
+                        </div>
+                    </div>
+                    <div class="con4_img_box swiper-slide">
+                        <a href="#" title="Facilities"><img src="./images/con4_2.png" alt="con4_2"></a>
+                        <div class="con4_txt_box">
+                            <h3>피트니스센터 <span>Fitness</span></h3>
+                            <p>신라호텔 피트니스센터는 테크노짐의 60여대 최첨단 ARTIS 장비와 4가지 Zone을 통해 트레이닝에 즐거움을 더해 드립니다.</p>
+                        </div>
+                    </div>
+                    <div class="con4_img_box swiper-slide">
+                        <a href="#" title="Facilities"><img src="./images/con4_3.png" alt="con4_3"></a>
+                        <div class="con4_txt_box">
+                            <h3>실내 수영장<span>Swimming Pool</span></h3>
+                            <p>신라호텔 실내 수영장은 자동 필터링 시스템으로 최상의 수질을 관리하며, 풀사이드 베드와 버블제트 수중 마사지로 편안하고 여유로운 시간을 즐기실 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="con4_img_box swiper-slide">
+                        <a href="#" title="Facilities"><img src="./images/con4_4.png" alt="con4_4"></a>
+                        <div class="con4_txt_box">
+                            <h3>레스토랑<span>Restaurant</span></h3>
+                            <p>신라호텔 STAY에서 미쉐린 3스타 셰프 야닉 알레노의 특별한 프랑스 요리를 경험해 보시기 바랍니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="con4_img_box swiper-slide">
+                        <a href="#" title="Facilities"><img src="./images/con4_5.png" alt="con4_5"></a>
+                        <div class="con4_txt_box">
+                            <h3>라운지 바 <span>Rounge & Bar</span></h3>
+                            <p>23층 최고층에 위치하여 멋지게 펼쳐진 전망이 한 눈에 들어오며 편안하고 아늑한 분위기를 자랑합니다.</p>
+                        </div>
+                    </div>
+                    <div class="con4_img_box swiper-slide">
+                        <a href="#" title="Facilities"><img src="./images/con4_6.png" alt="con4_6"></a>
+                        <div class="con4_txt_box">
+                            <h3>라운지 바 <span>Rounge & Bar</span></h3>
+                            <p>23층 최고층에 위치하여 멋지게 펼쳐진 전망이 한 눈에 들어오며 편안하고 아늑한 분위기를 자랑합니다.</p>
+                        </div>
+                    </div>
+                    <div class="con4_img_box swiper-slide">
+                        <a href="#" title="Facilities"><img src="./images/con4_7.png" alt="con4_7"></a>
+                        <div class="con4_txt_box">
+                            <h3>라운지 바 <span>Rounge & Bar</span></h3>
+                            <p>23층 최고층에 위치하여 멋지게 펼쳐진 전망이 한 눈에 들어오며 편안하고 아늑한 분위기를 자랑합니다.</p>
+                        </div>
+                    </div>
+                    <div class="con4_img_box swiper-slide">
+                        <a href="#" title="Facilities"><img src="./images/con4_8.png" alt="con4_8"></a>
+                        <div class="con4_txt_box">
+                            <h3>라운지 바 <span>Rounge & Bar</span></h3>
+                            <p>23층 최고층에 위치하여 멋지게 펼쳐진 전망이 한 눈에 들어오며 편안하고 아늑한 분위기를 자랑합니다.</p>
+                        </div>  
+                    </div>
+                </div>
+                <div class="swiper-pagination con4_pagination"></div>    
+            </article>
+            <a href="#" title="con2전체내용으로 넘어가기" class="m_btn">&#x002B;view more</a>
+        </section>
+
+        <!-- 다섯번째 콘텐츠 서식 -->
+        <section class="section con5">
+            <h6>&nbsp;</h6>
+            <article class="con5_wrap">
+                <h2 class="con_title">SHILLA MEMBERSHIP</h2>
+                <div id="con5_tab">
+                    <ul>
+                        <li><a href="#" title="">SHILLA REWARDS <i class="fas fa-angle-double-right"></i></a></li>
+                        <li><a href="#" title="">SHILLA PLATINUM <i class="fas fa-angle-double-right"></i></a></li>
+                        <li><a href="#" title="">SHILLA BLUECLUB <i class="fas fa-angle-double-right"></i></a></li>
+                    </ul>
+                </div>
+            <!-- 1024px부터 보이는 tab메뉴 버튼 -->
+            <div class="m_con5_tab">
+                <ul>
+                    <li class="con5_act">SHILLA REWARDS</li>
+                    <li>SHILLA PLATINUM</li>
+                    <li>SHILLA BLUECLUB</li>
+                </ul>
+            </div>
+            <!-- 탭 콘텐츠 부분 -->
+                <div class="con5_cont">
+                    <div class="con5_box">
+                        <img src="./images/con5_blur.png" alt="con5_blur" class="con5_blur">
+                        <img src="./images/con5_card1.png" alt="con5_card" class="con5_card">
+                        <div class="con5_txt_box">
+                            <h3>서울신라호텔 객실 할인</h3>
+                            <p>홈페이지 객실 요금의 5%할인</p>
+                            <p>객실 패키지 5%할인</p>
+                            <br>
+                            <h3>제주신라호텔 객실 할인</h3>
+                            <p>연중 홈페이지 객실 요금의 10% 할인</p>
+                            <p>연중 객실 패키지 요금의 10%할인</p>
+                            <br>
+                            <h3>디럭스룸 무료 숙박권 (1박) 1매</h3>
+                            <p>성인2인 기준, 더 파크뷰 2인 조식 포함</p>
+                            <p>서울신라호텔 레스토랑 이용권 1매 제공</p>
+                            <button class="effect_btn btn sub2">문의하기</button>
+                            <button class="effect_btn btn con5-btn">가입신청</button>
+                        </div>
+                    </div>
+                    <div class="con5_box">
+                        <img src="./images/con5_blur.png" class="con5_blur" alt="con5_blur">
+                        <img src="./images/con5_card2.png" class="con5_card" alt="con5_card">
+                        <div class="con5_txt_box">
+                            <h3>서울신라호텔 객실 할인</h3>
+                            <p>홈페이지 객실 요금의 5%할인</p>
+                            <p>객실 패키지 5%할인</p>
+                            <br>
+                            <h3>제주신라호텔 객실 할인</h3>
+                            <p>연중 홈페이지 객실 요금의 10% 할인</p>
+                            <p>연중 객실 패키지 요금의 10%할인</p>
+                            <br>
+                            <h3>디럭스룸 무료 숙박권 (1박) 1매</h3>
+                            <p>성인2인 기준, 더 파크뷰 2인 조식 포함</p>
+                            <p>서울신라호텔 레스토랑 이용권 1매 제공</p>
+                            <button class="effect_btn btn sub2">문의하기</button>
+                            <button class="effect_btn btn con5-btn">가입신청</button>
+                        </div>
+                    </div>
+                    <div class="con5_box">
+                        <img src="./images/con5_blur.png" alt="con5_blur" class="con5_blur">
+                        <img src="./images/con5_card3.png" alt="con5_card" class="con5_card">
+                        <div class="con5_txt_box">
+                            <h3>제주신라호텔 객실 할인</h3>
+                            <p>연중 홈페이지 객실 요금의 10% 할인</p>
+                            <p>연중 객실 패키지 요금의 10%할인</p>
+                            <br>
+                            <h3>식음 및 부대시설 할인</h3>
+                            <p>홈페이지 Room Only 요금 최대 15% 할인</p>
+                            <p>로비라운지 식사 25%, 음료 10% 할인</p>
+                            <br>
+                            <h3>공통 혜택</h3>
+                            <p>레스토랑 이용권 50,000P 1매 (1P = 1원)</p>
+                            <p>겔랑스파 10% 할인</p>
+                            <p>서울신라호텔 객실 정상가 50% 할인</p>
+                            <button class="effect_btn btn sub2">문의하기</button>
+                            <button class="effect_btn btn con5-btn">가입신청</button>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" title="con2전체내용으로 넘어가기" class="m_btn con5_more_btn">&#x002B;view more</a>
+            </article>
+        </section>
+
+        <!-- 여섯번째 콘텐츠 서식 -->
+        <section class="section con6">
+            <h2 class="con_title">SHILLA BRAND</h2>
+            <article class="con6_wrap">
+                <div class="con6_box">
+                    <div class="con6_img">
+                        <a href="#" title="해당 페이지로 바로가기">
+                            <div class="con6_brand_txt">
+                                <h3>THE SHILLA</h3>
+                                <p>한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은 세계 최고의 어번(Urban) 라이프스타일 호텔로 고객들에게 최고급 Hospitality 서비스를 제공합니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con6_img">
+                        <a href="#" title="해당 페이지로 바로가기">
+                            <div class="con6_brand_txt">
+                                <h3>SHILLA STAY</h3>
+                                <p>'신라스테이'는 합리적인 가격에 신라호텔의 가치를 경험할 수 있는 비즈니스 호텔로, '스마터 스테이'를 콘셉트로 하여 신라호텔의 상품과 서비스 가치 위에 새로운 감성을 더한 공간입니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="con6_img">
+                        <a href="#" title="해당 페이지로 바로가기">
+                            <div class="con6_brand_txt">
+                                <h3>SHILLA MONOGRAM</h3>
+                                <p>신라모노그램은 THE SHILLA브랜드의 시그니처 요소와 라이프스타일이 어우러져 차별화된 경험으 제공하는 호텔 브랜드입니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <nav class="con6_tab">
+                    <ul>
+                        <li><a href="#" title="더신라서울">
+                            <div class="con6_dimd"></div>
+                            <img src="./images/logo_thesilla1.png" alt="con6_thashilla">
+                            <span class="con6_txt">한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은 세계 최고의 어번(Urban) 라이프스타일 호텔로 고객들에게 최고급 Hospitality 서비스를 제공합니다.</span>
+                        </a></li>
+                        <li><a href="#" title="신라스테이">
+                            <div class="con6_dimd"></div>
+                            <img src="./images/logo_sillastay.png" alt="con6_shillastay">
+                            <span class="con6_txt">한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은 세계 최고의 어번(Urban) 라이프스타일 호텔로 고객들에게 최고급 Hospitality 서비스를 제공합니다.</span>
+                        </a></li>
+                        <li><a href="#" title="신라모노그램">
+                            <div class="con6_dimd"></div>
+                            <img src="./images/logo_silliamonogram.png" alt="con6_logo_silliamonogram">
+                            <span class="con6_txt">한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은 세계 최고의 어번(Urban) 라이프스타일 호텔로 고객들에게 최고급 Hospitality 서비스를 제공합니다.</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+
+        <!-- 일곱번째 콘텐츠 서식 -->
+        <section class="section con07">
+            <h2 class="con_title">
+                <img src="./images/icon_sns3.png" alt="INSTAGRAM"> INSTAGRAM X
+                <span>THE SILLA</span>
+            </h2>
+            <p>신라호텔 인스타 리뷰 작성 이벤트에 참여하고 다양한 혜택 받아가세요!</p>
+            <h6>&nbsp;</h6>
+            <article class="con07_wrap">
+                <h6>&nbsp;</h6>
+                <div class="con07_gallery">
+                    <div class="con07_itembox grid_box">
+                        <img src="./images/con7_1.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox grid_box">
+                        <img src="./images/con7_2.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox grid_box">
+                        <img src="./images/con7_3.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox grid_box">
+                        <img src="./images/con7_4.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox grid_box">
+                        <img src="./images/con7_5.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox grid_box">
+                        <img src="./images/con7_6.png" alt="sns바로가기">
+                    </div>
+                </div>
+            </article>
+
+            <!-- 1024px 부터 보이는 서식 -->
+            <article class="m_con07_wrap">
+                <h6>&nbsp;</h6>
+                <div class="con07_gallery_1024">
+                    <div class="con07_itembox">
+                        <img src="./images/con7_1.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox">
+                        <img src="./images/con7_2.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox">
+                        <img src="./images/con7_3.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox">
+                        <img src="./images/con7_4.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox">
+                        <img src="./images/con7_5.png" alt="sns바로가기">
+                    </div>
+                    <div class="con07_itembox">
+                        <img src="./images/con7_6.png" alt="sns바로가기">
+                    </div>
+                </div>
+            </article>
+            <a href="#" title="con2전체내용으로 넘어가기" class="m_btn con7_btn">&#x002B;view more</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="f_inner">
+            <div class="f_top">
+                <div class="f_top_left">
+                    <a href="#" title="the shilla">THE SHILLA</a>
+                    <a href="#" title="shilla monogarm">SHILLA MONOGRAM</a>
+                    <a href="#" title="shilla stay">SHILLA STAY</a>
+                </div>
+                <div class="f_top_right">
+                    <a href="#" title="호텔신라소개">호텔신라소개</a>
+                    <a href="#" title="호텔신라소개">호텔개발</a>
+                    <a href="#" title="호텔신라소개">고객문의</a>
+                    <a href="#" title="호텔신라소개">사이트맵</a>
+                </div>
+            </div>
+
+            <div class="f_bottom">
+                <nav>
+                    <ul>
+                        <li><a href="#" title="신라리워즈 약관">신라리워즈 약관</a></li>
+                        <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+                        <li><a href="#" title="이메일무단수집금지">이메일무단수집금지</a></li>
+                        <li><a href="#" title="윤리경영(부정정보)">윤리경영(부정정보)</a></li>
+                        <li><a href="#" title="시설물안전관리">시설물안전관리</a></li>
+                    </ul>
+                </nav>
+                <!-- 767px 이하부터 보이는 list -->
+                    <select name="m_f_list" id="m_f_list">
+                        <option>신라리워즈 약관</option>
+                        <option>개인정보처리방침</option>
+                        <option>이메일무단수집금지</option>
+                        <option>윤리경영(부정정보)</option>
+                        <option>시설물안전관리</option>
+                    </select>
+                <div class="m_f_top_right">
+                    <a href="#" title="호텔신라소개">호텔신라소개</a>
+                    <a href="#" title="호텔신라소개">호텔개발</a>
+                    <a href="#" title="호텔신라소개">고객문의</a>
+                    <a href="#" title="호텔신라소개">사이트맵</a>
+                </div>
+                <address>
+                    <p>호텔신라 서울특별시 중구 동호로 000 (우 : 00000) 대표이사 이부진 사업자등록번호 000-00-00000
+                       통신판매신고번호 중구00000호호스팅서비스제공자 삼성SDS 객실예약 shilla.reserve@samsung.com 고객센터 02 - 000 - 0000
+                    </p>
+                       <p>Copyright&copy;HOTEL SHILLA CO.LTD All Rights Reserved.</p>
+                </address>
+
+                <nav class="sns">
+                    <ul>
+                        <li><a href="index.html" title="하단로고"><img src="./images/logo_thesilla2.png" alt="하단로고"></a></li>
+
+                        <li><a href="#" title="트위터"><img src="./images/icon_sns1.png" alt="트위터"></a></li>
+
+                        <li><a href="#" title="페이스북"><img src="./images/icon_sns2.png" alt="페이스북"></a></li>
+
+                        <li><a href="#" title="인스타그램"><img src="./images/icon_sns3.png" alt="인스타그램"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
